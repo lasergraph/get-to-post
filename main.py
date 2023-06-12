@@ -3,6 +3,7 @@ from urllib.parse import parse_qs
 import requests
 import datetime
 import pytz
+import os
 
 get_data = {}
 request_url = os.getenv("FE2_URL")
