@@ -51,7 +51,7 @@ class GP(BaseHTTPRequestHandler):
 
             #POST Request
             request_data = { 
-                'type': alarmadress,
+                'type': alarmatype,
                 'timestamp': timestamp,
                 'sender': sender,
                 'authorization': auth,
