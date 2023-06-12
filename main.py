@@ -26,7 +26,6 @@ class GP(BaseHTTPRequestHandler):
         self._set_headers()
     def do_GET(self):
         self._set_headers()
-        print(parse_qs(self.path[2:]))
         get_data = parse_qs(self.path[2:])
 
         typ = ''
@@ -44,10 +43,6 @@ class GP(BaseHTTPRequestHandler):
                 print('key nicht bekannt')
 
         if  len(typ) > 1:
-        
-            print(typ)
-            print(message)
-            print(subject)
 
             #POST Request
             request_data = { 
@@ -69,7 +64,6 @@ class GP(BaseHTTPRequestHandler):
                     "custom": {
                         "typ": typ
                     }
-
                 }
             }
             r = requests.post(request_url, json = request_data)
