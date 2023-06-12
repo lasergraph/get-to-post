@@ -5,9 +5,13 @@ import datetime
 import pytz
 
 get_data = {}
-#request_url = "http://localhost:8090"
-request_url = 'https://httpbin.org/post'
-auth = 'testTRIO1'
+request_url = os.getenv("FE2_URL")
+auth = os.getenv("AUTH")
+alarmtype = os.getenv("ALARM_TYPE")
+sender = os.getenv("ALARM_SENDER")
+keyword = os.getenv("ALARM_KEYWORD")
+address = os.getenv("ALARM_ADDRESS")
+
 now = datetime.datetime.now(pytz.timezone('Europe/Zurich'))
 timestamp = now.strftime('%Y-%m-%dT%H:%M:%S%z')
 
@@ -46,19 +50,19 @@ class GP(BaseHTTPRequestHandler):
 
             #POST Request
             request_data = { 
-                'type': 'ALARM',
+                'type': alarmadress,
                 'timestamp': timestamp,
-                'sender': 'WAGO',
+                'sender': sender,
                 'authorization': auth,
                 'data': { 
-                    'keyword': 'Fw Magazin',
+                    'keyword': keyword,
                     'subject' : subject,
                     'message': [
                         message
                     ],
                     'units': [
                       {
-                        'address': 'WagoAlarm'
+                        'address': address
                       }  
                     ],
                     "custom": {
