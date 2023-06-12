@@ -14,6 +14,6 @@ ENV FE2_URL="https://URL:PORT/rest/external/http/position/v2"
 ENV AUTH="secret"
 
 #Port für Webook
-EXPOSE 8080
+EXPOSE 8088
 
 ENTRYPOINT python3 /opt/scripts/main.py
