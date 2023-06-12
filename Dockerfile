@@ -12,6 +12,10 @@ COPY main.py /opt/scripts/
 #env
 ENV FE2_URL="https://URL:PORT/rest/external/http/position/v2"
 ENV AUTH="secret"
+ENV ALARM_TYPE="ALARM"
+ENV ALARM_SENDER="WAGO"
+ENV ALARM_KEYWORD="Fw Magazin"
+ENV ALARM_ADDRESS="WagoAlarm"
 
 #Port für Webook
 EXPOSE 8088
