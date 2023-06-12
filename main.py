@@ -1,5 +1,5 @@
-from http3.server import BaseHTTPRequestHandler, HTTPServer
-from urllib3.parse import parse_qs
+from http.server import BaseHTTPRequestHandler, HTTPServer
+from urllib.parse import parse_qs
 import requests
 import datetime
 import pytz
