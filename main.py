@@ -86,9 +86,9 @@ class GP(BaseHTTPRequestHandler):
 
 #HTTP-Server for GET Listening
 def run(server_class=HTTPServer, handler_class=GP, port=8088):
-    server_address = ('localhost', port)
+    server_address = ('', port)
     httpd = server_class(server_address, handler_class)
-    print("Server running at localhost:8088...")
+    print("Server running at Port 8088...")
     httpd.serve_forever()
 
 run()
