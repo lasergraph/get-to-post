@@ -4,7 +4,7 @@ FROM python:alpine3.18
 RUN mkdir /opt/scripts && mkdir /opt/scripts
 
 #Python Pakete installieren
-RUN pip3 install datetime requests tzdata
+RUN pip3 install http3 urllib3 datetime requests pytz
 
 #Dateien kopieren
 COPY main.py /opt/scripts/
