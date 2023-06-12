@@ -1,7 +1,7 @@
 FROM python:alpine3.18
 
 #Ordner erstellen
-RUN mkdir /opt/scripts && mkdir /opt/scripts
+RUN mkdir /opt/scripts
 
 #Python Pakete installieren
 RUN pip3 install http3 urllib3 datetime requests pytz
